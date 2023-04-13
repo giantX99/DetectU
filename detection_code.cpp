@@ -4,22 +4,21 @@
 #include <opencv2/dnn.hpp>
 #include <opencv2/dnn/all_layers.hpp>
  
-using namespace std;
 using namespace cv;
 using namespace dnn;
  
  
 int main(int, char**) {
 
-    string file_path = "C:/Users/nhoei/ComputerVision/opencvGPU/";
-    vector<string> class_names;
-    ifstream ifs(string(file_path + "object_detection_classes_coco.txt").c_str());
-    string line;
+    std::string file_path = "C:/Users/nhoei/ComputerVision/opencvGPU/";
+    std::vector<string> class_names;
+    std::ifstream ifs(string(file_path + "object_detection_classes_coco.txt").c_str());
+    std::string line;
 
     // Load in all the classes from the file
     while (getline(ifs, line))
     {   
-        cout << line << endl;
+        std::cout << line << std::endl;
         class_names.push_back(line);
     } 
     
@@ -51,7 +50,7 @@ int main(int, char**) {
 
         // Check if image is loaded in correctly
         if (!isSuccess){
-            cout << "Could not load the image!" << endl;
+            std::cout << "Could not load the image!" << std::endl;
             break;
         }
         
@@ -92,7 +91,7 @@ int main(int, char**) {
                 int bboxWidth = int(results.at<float>(i, 5) * image.cols - bboxX);
                 int bboxHeight = int(results.at<float>(i, 6) * image.rows - bboxY);
                 rectangle(image, Point(bboxX, bboxY), Point(bboxX + bboxWidth, bboxY + bboxHeight), Scalar(0,0,255), 2);
-                string class_name = class_names[class_id-1];
+                std::string class_name = class_names[class_id-1];
                 putText(image, class_name + " " + to_string(int(confidence*100)) + "%", Point(bboxX, bboxY - 10), FONT_HERSHEY_SIMPLEX, 1.5, Scalar(0,255,0), 2);
             }
         }
