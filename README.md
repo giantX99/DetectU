@@ -1,2 +1,2 @@
-# ECE3220_Project
+# DetectU
 Final Project for ECE3220
