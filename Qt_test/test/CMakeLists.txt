@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
+set( OpenCV_DIR C:\\Users\\gian-\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\opencv\\build\\x64\\vc16\\lib )
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
@@ -52,7 +53,7 @@ else()
         )
     endif()
 endif()
-target_link_libraries( test ${OpenCV_LIBS})
+target_link_libraries( test ${OpenCV_LIBS} )
 target_link_libraries(test PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
 set_target_properties(test PROPERTIES
