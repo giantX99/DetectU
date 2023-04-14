@@ -1,0 +1,9 @@
+C:/Users/gian-/OneDrive/Documentos/GitHub/MU_ECE_3220/DetectU/Qt_test/build-test-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/test.dir
+C:/Users/gian-/OneDrive/Documentos/GitHub/MU_ECE_3220/DetectU/Qt_test/build-test-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/gian-/OneDrive/Documentos/GitHub/MU_ECE_3220/DetectU/Qt_test/build-test-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/gian-/OneDrive/Documentos/GitHub/MU_ECE_3220/DetectU/Qt_test/build-test-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/gian-/OneDrive/Documentos/GitHub/MU_ECE_3220/DetectU/Qt_test/build-test-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/gian-/OneDrive/Documentos/GitHub/MU_ECE_3220/DetectU/Qt_test/build-test-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/gian-/OneDrive/Documentos/GitHub/MU_ECE_3220/DetectU/Qt_test/build-test-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/gian-/OneDrive/Documentos/GitHub/MU_ECE_3220/DetectU/Qt_test/build-test-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/test_autogen_timestamp_deps.dir
+C:/Users/gian-/OneDrive/Documentos/GitHub/MU_ECE_3220/DetectU/Qt_test/build-test-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/test_autogen.dir
