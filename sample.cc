@@ -67,43 +67,6 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
-/*void Detection::start_detect(Mat &image, CasacdeClassifier& faceCascade, double scale){
-    std::vector<Rect> faces;
-    Mat gray;
-    Mat small_image;
-    //coverting to GrayScale 
-    cvtColor(image, gray, COLOR_BGR2GRAY);
-    double fx = 1/scale;
-
-    resize(gray, small_image, Size(), fx, fx, INTER_LINEAR);
-    equalizeHist(small_image, small_image);
-
-    //detecting faces
-    faceCascade.detectMultiScale(small_image, faces, 1.1, 2, 0|CASCADE_SCALE_IMAGE, Size(30, 30));
-
-    //drawing rectangles 
-    for(size_t i = 0; i < faces.size(); i++){
-        Rect r = faces[i];
-        Point center;
-        Scalar color = Scalar(242, 172, 185);
-        int radius;
-
-        double aspect_ratio = (double)r.width/r.height;
-        if(0.75 < aspect_ratio && aspect_ratio < 1.3){
-            center.x = cvRound((r.x + r.width*0.5)*scale);
-            center.y = cvRound((r.width + r.height)*0.25*scale);
-            rectangle(image, faces, color, 2);
-        }
-         else
-            rectangle(image, cvPoint(cvRound(r.x*scale), cvRound(r.y*scale)),
-                    cvPoint(cvRound((r.x + r.width-1)*scale),
-                    cvRound((r.y + r.height-1)*scale)), color, 3, 8, 0);
-    }
-
-    imshow("Face Detection", image);
-}
-*/
-
 void detectAndDraw( Mat& img, CascadeClassifier& cascade,
 					CascadeClassifier& nestedCascade,
 					double scale)
