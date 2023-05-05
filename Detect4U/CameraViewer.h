@@ -27,6 +27,7 @@ public slots:
     void stop_record();
 
 private:
+    //CameraStrategy Recorder;
     QCamera* m_camera = 0;
     QMediaCaptureSession* m_session = 0;
     QMediaRecorder recorder;

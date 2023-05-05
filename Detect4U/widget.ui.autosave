@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>443</width>
+    <height>369</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Detect4U</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>0</y>
+     <width>401</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>CameraView</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>381</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="DetectButton" name="detect_button">
+       <property name="text">
+        <string>Detect</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="RecordButton" name="record_button">
+       <property name="text">
+        <string>Record</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="CameraViewer" name="camera_viewer" native="true">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>29</y>
+      <width>381</width>
+      <height>201</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DetectButton</class>
+   <extends>QPushButton</extends>
+   <header>DetectButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RecordButton</class>
+   <extends>QPushButton</extends>
+   <header>RecordButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CameraViewer</class>
+   <extends>QWidget</extends>
+   <header>CameraViewer.h</header>
+   <container>1</container>
+   <slots>
+    <slot>start_record()</slot>
+    <slot>stop_record()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>start_recording()</slot>
+ </slots>
+</ui>
