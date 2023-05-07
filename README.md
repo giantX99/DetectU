@@ -12,7 +12,9 @@ The Strategy design pattern is a behavioral design pattern that enables selectin
 It does this by defining a family of algorithms and encapsulates them in objects.
 And so, instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
 
-#Example
+# Example
+#```C++
+
 #include <iostream>
 #include <memory>
 #include <utility>
@@ -65,7 +67,7 @@ int main() {
     std::cout << '\n';
 
 }
-
+```
 # Singleton
 This pattern involves a single class which is responsible to create an object while making sure that only single object gets created. 
 This class provides a way to access its only object which can be accessed directly without need to instantiate the object of the class.
