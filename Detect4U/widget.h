@@ -33,6 +33,7 @@ private:
 private slots:
 
     void on_record_button_clicked(bool checked);
+    void on_capture_button_clicked();
 };
 
 #endif // WIDGET_HPP

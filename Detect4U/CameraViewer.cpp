@@ -19,17 +19,19 @@ CameraViewer::CameraViewer(QWidget* parent) :
 
 
 CameraViewer::~CameraViewer(){
-    if (m_session && !m_camera) { delete m_session; }
-    if (!m_session && m_camera) { delete m_camera; }
-    if (m_session && m_camera) {
+    if (m_session && m_camera && cam_strat) {
         delete m_session;
         delete m_camera;
+        delete cam_strat;
     }
 }
 
 
 QCamera* CameraViewer::get_camera() { return m_camera; }
 QMediaCaptureSession* CameraViewer::get_session() { return m_session; }
+
+
+void CameraViewer::set_strategy(CameraStrategy* strategy){ cam_strat = strategy; }
 
 void CameraViewer::do_strategy(bool t) {
     cam_strat->do_strat(t);

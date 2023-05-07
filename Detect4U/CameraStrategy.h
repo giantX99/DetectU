@@ -4,7 +4,7 @@
 
 class CameraStrategy {
 public:
-    virtual void do_strat(bool t = true) = 0;
+    virtual void do_strat(bool t) = 0;
     virtual ~CameraStrategy(){}
 };
 

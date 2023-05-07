@@ -3,11 +3,8 @@
 #define RECORDSTRATEGY_H
 
 #include "CameraStrategy.h"
+#include "CameraViewer.h"
 
-#include <QVideoWidget>
-#include <QMediaDevices>
-#include <QMediaCaptureSession>
-#include <QCamera>
 #include <QMediaRecorder>
 #include <QUrl>
 
@@ -23,6 +20,7 @@ public:
     RecordStrategy();
     ~RecordStrategy();
 
+    void set_cam_viewer(CameraViewer* c);
     void do_strat(bool t);
 
 private:
@@ -30,9 +28,7 @@ private:
     void start_record();
     void stop_record();
 
-
-    QCamera* m_camera = 0;
-    QMediaCaptureSession* m_session = 0;
+    CameraViewer* cam_viewer = 0;
     QMediaRecorder recorder;
 };
 

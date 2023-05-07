@@ -1,21 +1,11 @@
 
 #include "RecordStrategy.h"
 
-RecordStrategy::RecordStrategy()
-{
+RecordStrategy::RecordStrategy(){}
 
-}
+RecordStrategy::~RecordStrategy(){ if (cam_viewer) { delete cam_viewer; } }
 
-RecordStrategy::~RecordStrategy(){
-    if (m_session && !m_camera) { delete m_session; }
-    if (!m_session && m_camera) { delete m_camera; }
-    if (m_session && m_camera) {
-        delete m_session;
-        delete m_camera;
-    }
-}
-
-
+void RecordStrategy::set_cam_viewer(CameraViewer* c) { cam_viewer = c; }
 
 void RecordStrategy::set_output() {
     auto now = std::chrono::system_clock::now();
@@ -32,11 +22,11 @@ void RecordStrategy::set_output() {
 
 void RecordStrategy::start_record() {
 
-    m_session->setRecorder(&recorder);
+    cam_viewer->get_session()->setRecorder(&recorder);
     recorder.setQuality(QMediaRecorder::HighQuality);
 
     try{
-        set_output();
+        this->set_output();
     }
     catch (QMediaRecorder::Error e) {
         std::cout << "Error occurred" << std::endl;
@@ -52,4 +42,10 @@ void RecordStrategy::stop_record() {
         recorder.stop();
         std::cout << "RECORDING STOPPED" << std::endl;
     }
+}
+
+
+void RecordStrategy::do_strat(bool t){
+    if (t) { this->start_record(); }
+    else { this->stop_record(); }
 }
