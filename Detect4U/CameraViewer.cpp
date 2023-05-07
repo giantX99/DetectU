@@ -28,36 +28,9 @@ CameraViewer::~CameraViewer(){
 }
 
 
-void CameraViewer::start_record() {
+QCamera* CameraViewer::get_camera() { return m_camera; }
+QMediaCaptureSession* CameraViewer::get_session() { return m_session; }
 
-//    auto now = std::chrono::system_clock::now();
-//    std::time_t time = std::chrono::system_clock::to_time_t(now);
-
-//    std::stringstream ss;
-//    ss << "Detect4U_Recording@";
-//    ss << std::put_time(std::localtime(&time), "%Yy-%mm-%dd-%H-%M-%S");
-//    ss << ".mp3";
-//    std::string file_name = ss.str();
-//    std::cout << "File Name: " << file_name << std::endl;
-    std::string file_name = "c/test/test.mp3";
-    m_session->setRecorder(&recorder);
-//    recorder.setQuality(QMediaRecorder::HighQuality);
-//    recorder.setOutputLocation(QUrl::fromLocalFile(QString::fromStdString(file_name)));
-    try{
-        recorder.setOutputLocation(QUrl::fromLocalFile(QString::fromStdString(file_name)));
-    }
-    catch (QMediaRecorder::Error e) {
-        std::cout << "Error occurred" << std::endl;
-        return;
-    }
-
-    recorder.record();
-    std::cout << "RECORDING STARTED" << std::endl;
-}
-
-void CameraViewer::stop_record() {
-    if (recorder.recorderState()) {
-        recorder.stop();
-        std::cout << "RECORDING STOPPED" << std::endl;
-    }
+void CameraViewer::do_strategy(bool t) {
+    cam_strat->do_strat(t);
 }

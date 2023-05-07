@@ -3,17 +3,12 @@
 #define CAMERAVIEWER_H
 
 #include <QVideoWidget>
+
 #include <QMediaDevices>
 #include <QMediaCaptureSession>
 #include <QCamera>
-#include <QMediaRecorder>
-#include <QUrl>
 
-#include <iostream>
-#include <exception>
-#include <sstream>
-#include <chrono>
-#include <iomanip>
+#include "CameraStrategy.h"
 
 
 class CameraViewer : public QVideoWidget
@@ -22,15 +17,20 @@ public:
     CameraViewer(QWidget* parent = 0);
     ~CameraViewer();
 
+    void set_strategy();
+    QCamera* get_camera();
+    QMediaCaptureSession* get_session();
+
 public slots:
-    void start_record();
-    void stop_record();
+    void do_strategy(bool t);
+
 
 private:
-    //CameraStrategy Recorder;
+
+    CameraStrategy *cam_strat = 0;
+
     QCamera* m_camera = 0;
     QMediaCaptureSession* m_session = 0;
-    QMediaRecorder recorder;
 };
 
 #endif // CAMERAVIEWER_H

@@ -9,11 +9,6 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //record button function:
-//    connect(ui->record_button, SIGNAL(pressed()),
-//            ui->camera_viewer, SLOT(start_record()));
-//    connect(ui->record_button, SIGNAL(released()),
-//            ui->camera_viewer, SLOT(stop_record()));
 }
 
 Widget::~Widget()
@@ -24,7 +19,7 @@ Widget::~Widget()
 
 void Widget::on_record_button_clicked(bool checked)
 {
-    if (checked) { ui->camera_viewer->start_record(); }
-    else { ui->camera_viewer->stop_record(); }
+    if (checked) { ui->camera_viewer->do_strategy(true); }
+    else { ui->camera_viewer->do_strategy(false); }
 }
 

@@ -11,15 +11,20 @@ CONFIG += c++17
 
 SOURCES += \
     CameraViewer.cpp \
-    DetectButton.cpp \
+    CaptureButton.cpp \
+    CaptureStrategy.cpp \
     RecordButton.cpp \
+    RecordStrategy.cpp \
     main.cpp \
     widget.cpp
 
 HEADERS += \
+    CameraStrategy.h \
     CameraViewer.h \
-    DetectButton.h \
+    CaptureButton.h \
+    CaptureStrategy.h \
     RecordButton.h \
+    RecordStrategy.h \
     widget.h
 
 FORMS += \

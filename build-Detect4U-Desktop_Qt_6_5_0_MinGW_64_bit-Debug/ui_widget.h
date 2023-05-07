@@ -15,7 +15,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QWidget>
 #include "CameraViewer.h"
-#include "DetectButton.h"
+#include "CaptureButton.h"
 #include "RecordButton.h"
 
 QT_BEGIN_NAMESPACE
@@ -26,7 +26,7 @@ public:
     QGroupBox *groupBox;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
-    DetectButton *detect_button;
+    CaptureButton *capture_button;
     RecordButton *record_button;
     CameraViewer *camera_viewer;
 
@@ -44,12 +44,12 @@ public:
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        detect_button = new DetectButton(layoutWidget);
-        detect_button->setObjectName("detect_button");
-        detect_button->setCheckable(true);
-        detect_button->setChecked(false);
+        capture_button = new CaptureButton(layoutWidget);
+        capture_button->setObjectName("capture_button");
+        capture_button->setCheckable(true);
+        capture_button->setChecked(false);
 
-        horizontalLayout->addWidget(detect_button);
+        horizontalLayout->addWidget(capture_button);
 
         record_button = new RecordButton(layoutWidget);
         record_button->setObjectName("record_button");
@@ -71,7 +71,7 @@ public:
     {
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Detect4U", nullptr));
         groupBox->setTitle(QCoreApplication::translate("Widget", "CameraView", nullptr));
-        detect_button->setText(QCoreApplication::translate("Widget", "Detect", nullptr));
+        capture_button->setText(QCoreApplication::translate("Widget", "Capture", nullptr));
         record_button->setText(QCoreApplication::translate("Widget", "Record", nullptr));
     } // retranslateUi
 

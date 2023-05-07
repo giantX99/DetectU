@@ -36,9 +36,9 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="DetectButton" name="detect_button">
+      <widget class="CaptureButton" name="capture_button">
        <property name="text">
-        <string>Detect</string>
+        <string>Capture</string>
        </property>
        <property name="checkable">
         <bool>true</bool>
@@ -77,11 +77,6 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>DetectButton</class>
-   <extends>QPushButton</extends>
-   <header>DetectButton.h</header>
-  </customwidget>
-  <customwidget>
    <class>RecordButton</class>
    <extends>QPushButton</extends>
    <header>RecordButton.h</header>
@@ -95,6 +90,11 @@
     <slot>start_record()</slot>
     <slot>stop_record()</slot>
    </slots>
+  </customwidget>
+  <customwidget>
+   <class>CaptureButton</class>
+   <extends>QPushButton</extends>
+   <header>CaptureButton.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
