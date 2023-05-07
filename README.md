@@ -106,8 +106,8 @@ int main(int argc, char* argv[]){
 # QT
 Qt is a cross-platform application development framework used to create software with graphical user interfaces (GUIs) and other types of applications.
 It provides a comprehensive set of tools and libraries for creating applications that run on various operating systems, which we used 
-including Windows, macOS, and Linux. For this project, we utilized the libraries of <QVideoWidget>, <QMediaDevices>,
-<QMediaCaptureSession>, and <QCamera> which the documentation is provided under the reference tab. 
+including Windows, macOS, and Linux. For this project, we utilized the libraries of QVideoWidget, QMediaDevices,
+QMediaCaptureSession, and QCamera which the documentation is provided under the reference tab. 
 Qt is known for its ease of use, flexibility, and versatility, making it a popular choice among developers for creating applications for desktop, mobile, and embedded systems. It supports multiple programming languages, but for thisproject we only used C++.
 
 # References
