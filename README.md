@@ -1,5 +1,6 @@
 # DetectU
 ECE3220 Final Project Kyle Peckenschneider, Grace Ogunbowale, and Gian Lucca Teixeira
+
 Demo video link: https://youtu.be/MD87ds2tpdA
 
 In this project, we used Qt for a graphical user interface to create an application of a webcam where you
