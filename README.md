@@ -5,7 +5,8 @@ In this project, we used Qt for a graphical user interface to create an applicat
 are able to capture a photo, or record a video in which the recording file is saved to your computer.
 To implent this, we used a stategy design pattern to switch between the operation of caputuring a photo
 or recording. We also used a Singleton Strategy over the Record and Capture startegy classes because
-only a single instance of the two were needed. 
+only a single instance of the two were needed. Lastly, we implemented test to ensure of program
+runs without any bugs or exceptions.
 
 # Stratgey Design Pattern
 The Strategy design pattern is a behavioral design pattern that enables selecting an algorithm at runtime.
@@ -103,9 +104,13 @@ int main(int argc, char* argv[]){
 ```
 
 # QT
+Qt is a cross-platform application development framework used to create software with graphical user interfaces (GUIs) and other types of applications.
+It provides a comprehensive set of tools and libraries for creating applications that run on various operating systems, which we used 
+including Windows, macOS, and Linux. For this project, we utilized the libraries of <QVideoWidget>, <QMediaDevices>,
+<QMediaCaptureSession>, and <QCamera> which the documentation is provided under the reference tab. 
+Qt is known for its ease of use, flexibility, and versatility, making it a popular choice among developers for creating applications for desktop, mobile, and embedded systems. It supports multiple programming languages, but for thisproject we only used C++.
 
-
-# Refrences
+# References
 https://doc.qt.io/qt-6/qtmultimedia-camera-example.html
 
 https://refactoring.guru/design-patterns/strategy/cpp/example
