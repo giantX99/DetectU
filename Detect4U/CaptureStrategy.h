@@ -3,9 +3,14 @@
 #define CAPTURESTRATEGY_H
 
 #include "CameraStrategy.h"
-
 #include "CameraViewer.h"
 
+#include <QImageCapture>
+
+#include <iostream>
+#include <sstream>
+#include <chrono>
+#include <iomanip>
 
 class CaptureStrategy : public CameraStrategy
 {
@@ -14,13 +19,14 @@ public:
     ~CaptureStrategy();
 
     void set_cam_viewer(CameraViewer* c);
-    void do_strat(bool t);
+    void do_strat(bool t) override;
 
 private:
-    void set_output();
+    QString set_filename();
     void start_capture();
 
     CameraViewer* cam_viewer = 0;
+    QImageCapture* capture = 0;
 };
 
 #endif // CAPTURESTRATEGY_H

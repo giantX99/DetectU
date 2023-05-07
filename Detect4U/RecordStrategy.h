@@ -21,7 +21,7 @@ public:
     ~RecordStrategy();
 
     void set_cam_viewer(CameraViewer* c);
-    void do_strat(bool t);
+    void do_strat(bool t) override;
 
 private:
     void set_output();
