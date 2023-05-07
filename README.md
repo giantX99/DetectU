@@ -5,7 +5,7 @@ In this project, we used Qt for a graphical user interface to create an applicat
 are able to capture a photo, or record a video in which the recording file is saved to your computer.
 To implent this, we used a stategy design pattern to switch between the operation of caputuring a photo
 or recording. We also used a Singleton Strategy over the Record and Capture startegy classes because
-only a single instance of the two were needed. Lastly, we implemented test to ensure of program
+only a single instance of the two were needed. Lastly, we implemented tests to ensure the program
 runs without any bugs or exceptions.
 
 # Stratgey Design Pattern
