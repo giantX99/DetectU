@@ -1,9 +1,11 @@
 # DetectU
 ECE3220 Final Project Kyle Peckenschneider, Grace Ogunbowale, and Gian Lucca Teixeira
 
+Demo video link: https://youtu.be/MD87ds2tpdA
+
 In this project, we used Qt for a graphical user interface to create an application of a webcam where you
 are able to capture a photo, or record a video in which the recording file is saved to your computer.
-To implent this, we used a stategy design pattern to switch between the operation of caputuring a photo
+To implent this, we used Qt API and implemented a stategy design pattern to switch between the operation of caputuring a photo
 or recording. We also used a Singleton Strategy over the Record and Capture startegy classes because
 only a single instance of the two were needed. Lastly, we implemented tests to ensure the program
 runs without any bugs or exceptions.
