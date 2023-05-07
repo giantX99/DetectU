@@ -7,11 +7,10 @@ RecordButton::RecordButton(QWidget* parent) :
     setText("Record");
 }
 
-RecordButton::~RecordButton() { if (m_recorder) { delete m_recorder; } }
+RecordButton::~RecordButton(){}
 
 void RecordButton::set_recorder(CameraViewer* c) {
-    m_recorder = new RecordStrategy;
-    m_recorder->set_cam_viewer(c);
+    m_recorder.set_cam_viewer(c);
 }
 
-RecordStrategy* RecordButton::get_recorder() { return m_recorder; }
+RecordStrategy* RecordButton::get_recorder() { return &m_recorder; }

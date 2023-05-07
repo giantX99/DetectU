@@ -3,6 +3,11 @@
 
 RecordStrategy::RecordStrategy(){}
 
+RecordStrategy& RecordStrategy::getInstance() {
+    static RecordStrategy recorder_instance;
+    return recorder_instance;
+}
+
 RecordStrategy::~RecordStrategy(){ if (cam_viewer) { delete cam_viewer; } }
 
 void RecordStrategy::set_cam_viewer(CameraViewer* c) { cam_viewer = c; }

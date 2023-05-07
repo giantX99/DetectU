@@ -34,7 +34,7 @@ public:
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName("Widget");
-        Widget->resize(419, 300);
+        Widget->resize(421, 321);
         groupBox = new QGroupBox(Widget);
         groupBox->setObjectName("groupBox");
         groupBox->setGeometry(QRect(9, 0, 400, 310));

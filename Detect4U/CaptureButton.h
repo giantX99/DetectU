@@ -18,7 +18,7 @@ public:
     CaptureStrategy* get_capture();
 
 private:
-    CaptureStrategy* m_capture = 0;
+    CaptureStrategy& m_capture = CaptureStrategy::getInstance();
 };
 
 #endif // CAPTUREBUTTON_H

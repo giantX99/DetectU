@@ -18,7 +18,7 @@ public:
     RecordStrategy* get_recorder();
 
 private:
-    RecordStrategy* m_recorder = 0;
+    RecordStrategy& m_recorder = RecordStrategy::getInstance();
 };
 
 #endif // RECORDBUTTON_H

@@ -3,6 +3,11 @@
 
 CaptureStrategy::CaptureStrategy() {}
 
+CaptureStrategy& CaptureStrategy::getInstance() {
+    static CaptureStrategy capture_instance;
+    return capture_instance;
+}
+
 CaptureStrategy::~CaptureStrategy() { if (cam_viewer) { delete cam_viewer; } }
 
 void CaptureStrategy::set_cam_viewer(CameraViewer* c) { cam_viewer = c; }

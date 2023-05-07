@@ -7,11 +7,10 @@ CaptureButton::CaptureButton(QWidget* parent) :
     setText("Capture");
 }
 
-CaptureButton::~CaptureButton() { if (m_capture) { delete m_capture; } }
+CaptureButton::~CaptureButton(){}
 
 void CaptureButton::set_capture(CameraViewer* c) {
-    m_capture = new CaptureStrategy;
-    m_capture->set_cam_viewer(c);
+    m_capture.set_cam_viewer(c);
 }
 
-CaptureStrategy* CaptureButton::get_capture() { return m_capture; }
+CaptureStrategy* CaptureButton::get_capture() { return &m_capture; }
