@@ -3,12 +3,7 @@
 
 CaptureStrategy::CaptureStrategy() {}
 
-CaptureStrategy::~CaptureStrategy() {
-    if (cam_viewer && capture) {
-        delete cam_viewer;
-        delete capture;
-    }
-}
+CaptureStrategy::~CaptureStrategy() { if (cam_viewer) { delete cam_viewer; } }
 
 void CaptureStrategy::set_cam_viewer(CameraViewer* c) { cam_viewer = c; }
 
@@ -31,13 +26,11 @@ QString CaptureStrategy::set_filename() {
 
 void CaptureStrategy::start_capture() {
 
-    capture = new QImageCapture(cam_viewer->get_camera());
+    //capture = new QImageCapture(cam_viewer->get_camera()); //Qt documentation is not update, this constructor is now a deleted function.
+    cam_viewer->get_session()->setImageCapture(&capture);
 
-    cam_viewer->get_session()->setImageCapture(capture);
-
-    if (capture->isReadyForCapture()) { capture->captureToFile(this->set_filename()); }
+    if (capture.isReadyForCapture()) { capture.captureToFile(this->set_filename()); }
     else { std::cout << "Not ready to capture image" << std::endl; }
-
 }
 
 

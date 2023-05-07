@@ -26,7 +26,7 @@ private:
     void start_capture();
 
     CameraViewer* cam_viewer = 0;
-    QImageCapture* capture = 0;
+    QImageCapture capture;
 };
 
 #endif // CAPTURESTRATEGY_H
