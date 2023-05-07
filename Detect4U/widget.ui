@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>443</width>
-    <height>369</height>
+    <width>421</width>
+    <height>321</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,12 +18,18 @@
     <rect>
      <x>9</x>
      <y>0</y>
-     <width>401</width>
-     <height>291</height>
+     <width>400</width>
+     <height>310</height>
     </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="title">
     <string>CameraView</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
@@ -41,7 +47,7 @@
         <string>Capture</string>
        </property>
        <property name="checkable">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="checked">
         <bool>false</bool>

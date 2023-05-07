@@ -24,10 +24,6 @@ public:
     ~Widget();
 
 private:
-    //QLabel *m_display;
-    //QPushButton *m_recordButton;
-    //QPushButton *m_detectButton;
-    //cv::VideoCapture m_camera;
     Ui::Widget *ui;
 
 private slots:

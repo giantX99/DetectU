@@ -34,10 +34,12 @@ public:
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName("Widget");
-        Widget->resize(443, 369);
+        Widget->resize(419, 300);
         groupBox = new QGroupBox(Widget);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(9, 0, 401, 291));
+        groupBox->setGeometry(QRect(9, 0, 400, 310));
+        groupBox->setMouseTracking(false);
+        groupBox->setAlignment(Qt::AlignCenter);
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(10, 240, 381, 41));
@@ -46,7 +48,7 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         capture_button = new CaptureButton(layoutWidget);
         capture_button->setObjectName("capture_button");
-        capture_button->setCheckable(true);
+        capture_button->setCheckable(false);
         capture_button->setChecked(false);
 
         horizontalLayout->addWidget(capture_button);
