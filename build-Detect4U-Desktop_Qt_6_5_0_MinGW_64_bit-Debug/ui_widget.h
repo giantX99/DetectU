@@ -34,15 +34,15 @@ public:
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName("Widget");
-        Widget->resize(421, 321);
+        Widget->resize(571, 451);
         groupBox = new QGroupBox(Widget);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(9, 0, 400, 310));
+        groupBox->setGeometry(QRect(20, -30, 541, 471));
         groupBox->setMouseTracking(false);
         groupBox->setAlignment(Qt::AlignCenter);
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(10, 240, 381, 41));
+        layoutWidget->setGeometry(QRect(10, 400, 521, 61));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -62,7 +62,7 @@ public:
 
         camera_viewer = new CameraViewer(groupBox);
         camera_viewer->setObjectName("camera_viewer");
-        camera_viewer->setGeometry(QRect(9, 29, 381, 201));
+        camera_viewer->setGeometry(QRect(9, 39, 521, 351));
 
         retranslateUi(Widget);
 
