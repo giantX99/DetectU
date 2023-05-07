@@ -107,5 +107,6 @@ int main(int argc, char* argv[]){
 
 # Refrences
 https://doc.qt.io/qt-6/qtmultimedia-camera-example.html
+
 https://refactoring.guru/design-patterns/strategy/cpp/example
 
